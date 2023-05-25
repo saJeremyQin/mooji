@@ -56,7 +56,7 @@ module.exports = {
       primary:"#7B1FDD",
       dark: '#0B0B22',
       error: '#FC165B',
-      badge: '#DE9C50',
+      badge: '#A659F8',
       muted: '#ffffff99',
       highlight: '#221048',
       light: '#ffffff0d',

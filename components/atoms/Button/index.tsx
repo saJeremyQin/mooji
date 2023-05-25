@@ -8,6 +8,7 @@ interface ButtonProps {
   color?: 'white' | 'primary' | 'lightBrown'
   radius?: 'pill' | 'rounded'
 }
+
 const Button = forwardRef(
   (
     {
@@ -30,6 +31,8 @@ const Button = forwardRef(
       }
     }
     const getStyleStyles = (): string => {
+      console.log("style is", style);
+      
       switch (style) {
         case 'light':
           switch (color) {
@@ -37,6 +40,8 @@ const Button = forwardRef(
               return 'bg-primaryLight text-white hover:brightness-90'
             case 'white':
               return 'bg-buttonLight text-white hover:brightness-90'
+            case 'lightBrown':
+              return 'bg-buttonLight text-lightBrown hover:brightness-90'
             // default:
             //   return '';
           }
@@ -46,8 +51,8 @@ const Button = forwardRef(
               return 'bg-transparent text-primary border border-primary hover:bg-primary hover:text-white'
             case 'white':
               return 'bg-transparent text-white border border-white hover:bg-white hover:text-dark'
-            // default:
-            //   return '';
+            default:
+              return '';
           }
         case 'solid':
           switch (color) {
@@ -57,7 +62,6 @@ const Button = forwardRef(
               return 'bg-white text-dark hover:brightness-90'
             case 'lightBrown':
               return 'bg-primary text-lightBrown hover:brightness-90'
-
           }
       }
     }
@@ -69,6 +73,8 @@ const Button = forwardRef(
           return 'rounded-full'
       }
     }
+    console.log("button value is", value);
+    
     return (
         <button
           className={`${getSizeStyles()} ${getStyleStyles()} ${getRadiusStyles()} transition-all select-none ${

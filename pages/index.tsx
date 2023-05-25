@@ -22,9 +22,9 @@ const Home = () => {
         >
           <div className="w-10/12 md:w-8/12 text-center">
             <PageSentence
-              title="We Design. We Develop. We Ship. In The Same Day."
-              description="We are committed to not making clients wait. We will deliver the work as quickly as possible. Even on the same day. Even so, we do not reduce the quality of our work."
-              badge="CLIENT-DEVELOPMENT-DRIVEN"
+              title="We Design. We Develop. We Ship."
+              description="MoojiDev are committed to deliver the work always on time,and with highest quality."
+              badge="CLIENT--ORIENTED"
             />
           </div>
           <div className="flex flex-col gap-6 sm:flex-row w-full sm:w-fit">
@@ -49,7 +49,7 @@ const Home = () => {
           <div data-aos="fade-up">
             <FeatureCard
               title="Develop"
-              description="Transform design and write business logic here. Choose the technology you want."
+              description="Transform design and write business logic here. Apply the technology fit for you."
               icon={<FiCode />}
             />
           </div>
@@ -62,7 +62,7 @@ const Home = () => {
           </div>
         </section>
         {/* Logo List */}
-        <LogoList />
+        {/* <LogoList /> */}
         {/* How We Work */}
         <section className="grid grid-cols-1 gap-6 sm:gap-8 place-items-center lg:grid-cols-2">
           <aside className="w-full h-[400px] relative" data-aos="fade-right">
@@ -79,7 +79,8 @@ const Home = () => {
           >
             <SectionSentence
               title="Everything is well planned, well designed and developed wholeheartedly"
-              paragraph="Careful planning makes us confident, developed with best practices so that the project can be maintained. We always test projects before they are shipped."
+              paragraph="Careful planning makes us confident, developed with best practices so that the project can be maintained properly.
+              High-quality test is conducted before they are shipped."
               badge="HOW WE WORK"
             />
           </aside>
@@ -90,7 +91,8 @@ const Home = () => {
             <div className="space-y-12" data-aos="fade-right">
               <SectionSentence
                 title="We're a team of designers, engineers and analysts"
-                paragraph="Our team consists of many creative people. We are committed to maintaining quality work as well as speed. These creative people work together to create maximum work results."
+                paragraph="Our team consists of many creative and highly experienced people. Having experience with super complex projects allows us to see problems from a higher perspective while also being able to 
+                adapt flexibly based on different situations, finding the most suitable solution for you."
                 badge="OUR TEAM"
               />
               <ButtonLink
