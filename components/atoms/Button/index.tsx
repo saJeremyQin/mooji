@@ -31,7 +31,7 @@ const Button = forwardRef(
       }
     }
     const getStyleStyles = (): string => {
-      console.log("style is", style);
+      // console.log("style is", style);
       
       switch (style) {
         case 'light':
@@ -73,7 +73,7 @@ const Button = forwardRef(
           return 'rounded-full'
       }
     }
-    console.log("button value is", value);
+    // console.log("button value is", value);
     
     return (
         <button

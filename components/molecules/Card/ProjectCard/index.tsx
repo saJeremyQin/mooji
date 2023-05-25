@@ -5,16 +5,19 @@ import Text from 'components/atoms/Text'
 interface ProjectCardProps extends LazyCardProps {
   title: string
   description: string
+  projectpic:string
 }
 const ProjectCard = ({
   title,
   description,
+  projectpic,
   bottomSquareSize = 'small',
   height = 450,
 }: ProjectCardProps) => {
   return (
     <div className="w-full">
-      <LazyCard bottomSquareSize={bottomSquareSize} height={height} />
+      <LazyCard bottomSquareSize={bottomSquareSize} height={height} imageSrc={projectpic}
+      />
       <div className="flex flex-col place-items-center text-center mt-10">
         <div className="mb-2.5">
           <Text value={title} textStyle="ProjectTitle" />

@@ -131,14 +131,18 @@ const Home = () => {
           <div className="w-full grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-5">
             <div data-aos="flip-left">
               <ProjectCard
-                title="The Desktop App Landing Page"
-                description="A landing page for desktop app"
+                title="WoWallet"
+                description="A wallet provding facilating lives and finance infomation"
+                projectpic='/images/wowallet_img.webp'
+                // projectpic=''
               />
             </div>
             <div data-aos="flip-right">
               <ProjectCard
-                title="The Mobile App Landing Page"
-                description="A landing page for mobile app"
+                title="WhatsMenu"
+                description="An ordering dishes mobile app"
+                projectpic='/images/whatsMenu_img.webp'
+                // projectpic=''
                 bottomSquareSize="big"
               />
             </div>

@@ -80,6 +80,7 @@ const ProjectDetail = () => {
                 <ProjectCard
                   title={project.title}
                   description={project.description}
+                  projectpic={''}
                 />
               </div>
             )
