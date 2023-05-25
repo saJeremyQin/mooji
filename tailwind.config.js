@@ -17,7 +17,10 @@ module.exports = {
     },
     extend:{
       backgroundColor:{
-        lightPurple:"#7b1FDD"
+        lightPurple:"#7b1FDD",
+      },
+      textColor:{
+        lightBrown:"#DE9C50",
       }
     },
     colors: ({ colors }) => ({
@@ -49,10 +52,11 @@ module.exports = {
       pink: colors.pink,
       rose: colors.rose,
       cardDark: '#161629',
-      primary: '#6016FC',
+      // primary: '#6016FC',
+      primary:"#7B1FDD",
       dark: '#0B0B22',
       error: '#FC165B',
-      badge: '#16FCD2',
+      badge: '#DE9C50',
       muted: '#ffffff99',
       highlight: '#221048',
       light: '#ffffff0d',

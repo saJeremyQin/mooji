@@ -86,7 +86,8 @@ const NavBar = () => {
                 <ButtonLink
                   value="Contact"
                   style="light"
-                  color="white"
+                  // color="white"
+                  color="lightBrown"
                   size="small"
                   href="/contact"
                 />

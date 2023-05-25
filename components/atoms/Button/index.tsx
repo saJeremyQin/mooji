@@ -5,7 +5,7 @@ interface ButtonProps {
   onClick?: MouseEventHandler<HTMLButtonElement>
   size?: 'normal' | 'small'
   style?: 'light' | 'outline' | 'solid'
-  color?: 'white' | 'primary'
+  color?: 'white' | 'primary' | 'lightBrown'
   radius?: 'pill' | 'rounded'
 }
 const Button = forwardRef(
@@ -37,6 +37,8 @@ const Button = forwardRef(
               return 'bg-primaryLight text-white hover:brightness-90'
             case 'white':
               return 'bg-buttonLight text-white hover:brightness-90'
+            // default:
+            //   return '';
           }
         case 'outline':
           switch (color) {
@@ -44,6 +46,8 @@ const Button = forwardRef(
               return 'bg-transparent text-primary border border-primary hover:bg-primary hover:text-white'
             case 'white':
               return 'bg-transparent text-white border border-white hover:bg-white hover:text-dark'
+            // default:
+            //   return '';
           }
         case 'solid':
           switch (color) {
@@ -51,6 +55,9 @@ const Button = forwardRef(
               return 'bg-primary text-white hover:brightness-90'
             case 'white':
               return 'bg-white text-dark hover:brightness-90'
+            case 'lightBrown':
+              return 'bg-primary text-lightBrown hover:brightness-90'
+
           }
       }
     }
