@@ -134,7 +134,6 @@ const Home = () => {
                 title="WoWallet"
                 description="A wallet provding facilating lives and finance infomation"
                 projectpic='/images/wowallet_img.webp'
-                // projectpic=''
               />
             </div>
             <div data-aos="flip-right">
@@ -142,7 +141,6 @@ const Home = () => {
                 title="WhatsMenu"
                 description="An ordering dishes mobile app"
                 projectpic='/images/whatsMenu_img.webp'
-                // projectpic=''
                 bottomSquareSize="big"
               />
             </div>

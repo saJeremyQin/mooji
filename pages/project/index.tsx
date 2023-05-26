@@ -10,16 +10,19 @@ import randomString from 'utils/randomString'
 const Project = () => {
   interface Project {
     title: string
-    description: string
+    description: string,
+    projectpic?:string
   }
   const projectList: Project[] = [
     {
-      title: 'The Mobile App Landing Page',
-      description: 'A landing page for mobile app',
+      title:"WoWallet",
+      description:"A wallet provding facilating lives and finance infomation",
+      projectpic:'/images/wowallet_img.webp'
     },
     {
-      title: 'The Desktop App Landing Page',
-      description: 'A landing page for desktop app',
+      title:"WhatsMenu",
+      description:"An ordering dishes mobile app",
+      projectpic:'/images/whatsMenu_img.webp'
     },
     {
       title: 'Simple Mobile Blog App',
@@ -63,7 +66,7 @@ const Project = () => {
                 <ProjectCard
                   title={project.title}
                   description={project.description}
-                  projectpic={''}
+                  projectpic={project.projectpic ? project.projectpic : ''}
                 />
               </div>
             )
