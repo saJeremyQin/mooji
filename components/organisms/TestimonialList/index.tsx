@@ -23,7 +23,7 @@ const TestimonialList = () => {
             spaceBetween: 50,
           },
         }}
-        loop={true}
+        loop={false}
         pagination={{
           clickable: true,
           type: 'bullets',
@@ -40,25 +40,26 @@ const TestimonialList = () => {
         <SwiperSlide className='mt-10'>
           <TestimonialCard
             avatarSrc="/images/testimonial-avatar.png"
-            name="Esther Howard"
-            company="Abstergo Ltd."
-            testimony={`"Your company is truly upstanding and is behind its product 100%. It's the perfect solution for our business. It has really helped our business."`}
+            name="Changjiang Cheng"
+            company="STARFIELD Ltd."
+            testimony={`"The App your company built is truly upstanding connect our customers with us perfectly. 
+            It's the excellent solution for our business."`}
           />
         </SwiperSlide>
         <SwiperSlide className='mt-10'>
           <TestimonialCard
             avatarSrc="/images/testimonial-avatar-2.png"
-            name="Esther Howard"
-            company="Abstergo Ltd."
-            testimony={`"Your company is truly upstanding and is behind its product 100%. It's the perfect solution for our business. It has really helped our business."`}
+            name="Tao Wu"
+            company="GuanYiAn Tech Ltd."
+            testimony={`"The online education platform your company provided support us a lot. It has really helped our business."`}
           />
         </SwiperSlide>
         <SwiperSlide className='mt-10'>
           <TestimonialCard
             avatarSrc="/images/testimonial-avatar-3.png"
-            name="Esther Howard"
-            company="Abstergo Ltd."
-            testimony={`"Your company is truly upstanding and is behind its product 100%. It's the perfect solution for our business. It has really helped our business."`}
+            name="Owen Chang"
+            company="Forks and Chopsticks Restaurant."
+            testimony={`"The whatsMenu app improve the effiency of our restaurant, I am shocked by the strength of new tech which make us serve our diners better is truly."`}
           />
         </SwiperSlide>
       </Swiper>

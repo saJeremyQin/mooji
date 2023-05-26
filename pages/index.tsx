@@ -174,25 +174,25 @@ const Home = () => {
             </div>
             <div data-aos="fade-up" data-aos-delay="300">
               <PricingCard
-                price="5000$"
+                price="4500$"
                 title="Development"
                 features={[
                   'Web & Mobile',
                   'Well-documented',
-                  '8 revisions',
-                  '$1000/additional page',
+                  '7 revisions',
+                  '$900/additional page',
                 ]}
               />
             </div>
             <div data-aos="fade-up-left">
               <PricingCard
-                price="3000$"
+                price="2500$"
                 title="Maintenance"
                 features={[
                   'Daily backup',
                   '3 hours of maintenance',
                   'Including fixing',
-                  '$50/additional hour',
+                  '$40/additional hour',
                 ]}
               />
             </div>

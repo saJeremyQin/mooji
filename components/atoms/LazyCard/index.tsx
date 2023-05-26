@@ -62,7 +62,7 @@ const LazyCard = ({
       <div className="w-full flex flex-col place-items-center">
         {/* bg-[#212136] */}
         <div className="w-full max-w-[160px] h-[26px] mb-3.5 rounded-full bg-primary "></div>
-        <div className="w-full max-w-[96px] h-[26px] rounded-full bg-white"></div>
+        <div className="w-full max-w-[96px] h-[26px] rounded-full"></div>
       </div>
       <div
         className={`w-full ${
