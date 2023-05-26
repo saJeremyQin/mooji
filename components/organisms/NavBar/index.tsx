@@ -34,7 +34,7 @@ const NavBar = () => {
   return (
     <>
       <nav
-        className={`pt-8 w-full top-[-30px] left-0 z-30 ${
+        className={`pt-8 w-full top-[-32px] left-0 z-30 ${
           isScrolled ? 'fixed' : 'absolute'
         }`}
       >

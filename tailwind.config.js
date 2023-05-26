@@ -18,9 +18,14 @@ module.exports = {
     extend:{
       backgroundColor:{
         lightPurple:"#7b1FDD",
+        pink: "#ff69b4",
+        // pink:colors.pink
       },
       textColor:{
         lightBrown:"#DE9C50",
+      },
+      borderColor:{
+        lightPurple:"#7b1FDD"
       }
     },
     colors: ({ colors }) => ({
