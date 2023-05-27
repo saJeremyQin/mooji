@@ -130,10 +130,15 @@ const Home = () => {
           </div>
           <div className="w-full grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-5">
             <div data-aos="flip-left">
-              <ProjectCard
+              {/* <ProjectCard
                 title="WoWallet"
                 description="A wallet provding facilating lives and finance infomation"
                 projectpic='/images/wowallet_img.webp'
+              /> */}
+              <ProjectCard
+                title='HotEvent'
+                description='A simple news pubishing system, some hotEvents around you.'
+                projectpic='/images/hotEvents_img.webp'
               />
             </div>
             <div data-aos="flip-right">

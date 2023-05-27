@@ -57,11 +57,11 @@ const LazyCard = ({
           : height == 450
           ? 'h-[450px]'
           : ''
-      } flex flex-col place-items-center place-content-between bg-cardDark border border-lightPurple pt-[54px] rounded-md px-12 lg:px-16 py-2`}
+      } flex flex-col place-items-center place-content-between bg-white bg-opacity-10 border border-light pt-[36px] rounded-md px-12 lg:px-16 py-5`}
     >
       <div className="w-full flex flex-col place-items-center">
         {/* bg-[#212136] */}
-        <div className="w-full max-w-[160px] h-[26px] mb-3.5 rounded-full bg-primary "></div>
+        <div className="w-full max-w-[160px] h-[26px] mb-3.5 rounded-full bg-light"></div>
         <div className="w-full max-w-[96px] h-[26px] rounded-full"></div>
       </div>
       <div
@@ -77,7 +77,6 @@ const LazyCard = ({
                 alt="cardImage"
                 layout="fill"
                 objectFit="cover"
-                // objectPosition="center"
                 className="rounded-tr-[20px] rounded-tl-[20px]"
               />
           )
