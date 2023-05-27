@@ -1,8 +1,8 @@
-<svg width="1024" height="256" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+<svg width="1024" height="256" xmlns="http://www.w3.org/2000/svg" background-color="transparent" preserveAspectRatio="xMidYMid meet">
 
  <g>
   <title>Layer 1</title>
-  <g id="svg_1" fill="#f7931e">
+  <g id="svg_1" fill="#fff">
    <svg y="0" x="-318" id="svg_4" viewBox="0 0 512 512" version="1" preserveAspectRatio="xMidYMid meet" class="icon">
     <svg id="svg_5" width="512" preserveAspectRatio="xMidYMid meet" height="512">
      <svg id="svg_6" viewBox="0 0 1992 1294" version="1.1">
@@ -11,6 +11,6 @@
     </svg>
    </svg>
   </g>
-  <text xml:space="preserve" text-anchor="start" font-family="Noto Sans JP" font-size="240" id="svg_478" y="201" x="402" stroke-width="0" stroke="#000" fill="#e9983e">Mooji</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Noto Sans JP" font-size="240" id="svg_478" y="201" x="402" stroke-width="0" stroke="#000" fill="#fff">Mooji</text>
  </g>
 </svg>

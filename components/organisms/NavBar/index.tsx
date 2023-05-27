@@ -39,20 +39,20 @@ const NavBar = () => {
         }`}
       >
         <Container>
-          {/* <div
+          <div
             className={`${
               browserName == 'Firefox' ? 'bg-gray-900' : 'bg-light'
             } px-6 py-4 w-full rounded-md backdrop-blur-3xl ${
               isScrolled || isOpen ? '' : 'lg:bg-transparent lg:px-0'
             }`}
-          > */}
-          <div
+          >
+          {/* <div
             className={`${
               browserName == 'Firefox' ? 'bg-gray-900' : 'bg-lightPurple'
             } px-6 py-4 w-full rounded-md backdrop-blur-3xl ${
               isScrolled || isOpen ? '' : 'lg:bg-lightPurple'
             }`}
-          >
+          > */}
             <div className="flex flex-col lg:flex-row w-full place-content-between lg:place-items-center">
               <div className="w-full flex flex-row place-content-between place-items-center lg:w-fit">
                 <NavBrand />
@@ -86,8 +86,8 @@ const NavBar = () => {
                 <ButtonLink
                   value="Contact"
                   style="light"
-                  // color="white"
-                  color="lightBrown"
+                  color="white"
+                  // color="lightBrown"
                   size="small"
                   href="/contact"
                 />

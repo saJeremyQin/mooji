@@ -13,12 +13,12 @@ const Footer = () => {
             <div className="">
               <Text
                 value={`Copyright © ${new Date().getFullYear()}`}
-                textStyle="FooterLinkGroupTitle"
+                textStyle="SectionParagraph"
               />
               <Text
                 value={`Design By Mooji Dev`}
-                // textStyle="SectionParagraph"
-                textStyle="FooterLinkGroupTitle"
+                textStyle="SectionParagraph"
+                // textStyle="FooterLinkGroupTitle"
               />
             </div>
           </div>

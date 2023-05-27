@@ -15,7 +15,7 @@ const ProjectCard = ({
   height = 450,
 }: ProjectCardProps) => {
   return (
-    <div className="w-full">
+    <div className="w-full ">
       <LazyCard bottomSquareSize={bottomSquareSize} height={height} imageSrc={projectpic}
       />
       <div className="flex flex-col place-items-center text-center mt-10">
