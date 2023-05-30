@@ -16,7 +16,7 @@ const Footer = () => {
                 textStyle="SectionParagraph"
               />
               <Text
-                value={`Design By Mooji Dev`}
+                value={`Design By Mooji.Dev`}
                 textStyle="SectionParagraph"
                 // textStyle="FooterLinkGroupTitle"
               />

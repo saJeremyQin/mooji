@@ -147,7 +147,7 @@ const Text = ({ value, textStyle }: TextProps) => {
       case 'CommentContent':
         return 'text-white font-medium text-base leading-8'
       case 'FooterLinkGroupTitle':
-        return 'text-badge font-medium text-sm leading-5'
+        return 'text-white font-medium text-sm leading-5'
       case 'IconListLabel':
         return 'text-muted font-medium text-base leading-5.5'
       case 'IconListValue':
