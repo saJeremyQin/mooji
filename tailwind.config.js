@@ -19,7 +19,7 @@ module.exports = {
       backgroundColor:{
         lightPurple:"#7b1FDD",
         pink: "#ff69b4",
-        // pink:colors.pink
+        fillGray:"#161629",
       },
       textColor:{
         lightBrown:"#DE9C50",

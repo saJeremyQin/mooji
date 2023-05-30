@@ -19,7 +19,7 @@ const HowWeWork = () => {
       <LineDivider />
       <section className="grid grid-cols-1 lg:grid-cols-2 place-items-center gap-8 lg:gap-5">
         <aside className="w-full" data-aos="fade-up-right">
-          <div className="w-full h-[410px] relative">
+          <div className="w-full h-[410px] relative borderLight">
             <Image
               src={'/images/discuss-illustration.webp'}
               quality={100}
