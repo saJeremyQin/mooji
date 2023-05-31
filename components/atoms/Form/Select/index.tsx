@@ -8,7 +8,8 @@ interface SelectOption {
   value: string
 }
 interface SelectProps {
-  defaultValue?: string
+  // defaultValue?: string
+  value?:string
   onChange?: React.FormEventHandler<HTMLSelectElement>
   required?: boolean
   options: SelectOption[]
@@ -18,11 +19,13 @@ const Select = ({
   onChange = () => {},
   required = false,
   options,
-  defaultValue = '',
+  // defaultValue = '',
+  value='',
   id,
 }: SelectProps) => {
   const defaultIndex: number = options.findIndex(
-    (element) => element.value == defaultValue
+    // (element) => element.value == defaultValue
+    (element) => element.value == value
   )
   const [selectedIndex, setSelectedIndex] = useState<number>(
     defaultIndex == -1 ? 0 : defaultIndex

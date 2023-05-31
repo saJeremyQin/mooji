@@ -4,11 +4,13 @@ import { useEffect, useState } from 'react'
 import randomString from 'utils/randomString'
 
 interface InputGroupProps extends InputProps {
-  label: string
+  label: string,
+  value: string
 }
 const InputGroup = ({
   label,
-  defaultValue,
+  // defaultValue,
+  value,
   onChange,
   onSubmit,
   required,
@@ -22,7 +24,8 @@ const InputGroup = ({
     <div className="space-y-1.5">
       <Label label={label} htmlFor={randomId} />
       <Input
-        defaultValue={defaultValue}
+        // defaultValue={defaultValue}
+        value={value}
         id={randomId}
         onChange={onChange}
         onSubmit={onSubmit}

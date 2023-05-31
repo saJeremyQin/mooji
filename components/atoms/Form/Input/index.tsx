@@ -1,6 +1,7 @@
 import React from 'react'
 interface InputProps {
-  defaultValue?: string | number
+  // defaultValue?: string | number
+  value?:string | number
   onChange?: React.ChangeEventHandler<HTMLInputElement>
   onSubmit?: React.FormEventHandler<HTMLInputElement>
   required?: boolean
@@ -8,7 +9,8 @@ interface InputProps {
   placeholder?:string
 }
 const Input = ({
-  defaultValue = '',
+  // defaultValue = '',
+  value='',
   onChange = () => {},
   onSubmit = () => {},
   required = false,
@@ -20,7 +22,8 @@ const Input = ({
       <input
         type="text"
         className="w-full bg-transparent border-borderLight text-white text-opacity-40 px-4 py-2 rounded focus:bg-light border      focus:border-white focus:border-opacity-30"
-        defaultValue={defaultValue}
+        // defaultValue={defaultValue}
+        value={value}
         onChange={onChange}
         onSubmit={onSubmit}
         required={required}
