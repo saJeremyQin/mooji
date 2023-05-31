@@ -15,22 +15,24 @@ const Project = () => {
   }
   const projectList: Project[] = [
     {
-      title:"WoWallet",
-      description:"A wallet provding facilating lives and finance infomation",
-      projectpic:'/images/wowallet_img.webp'
+      title:"StartZero",
+      description:"An mini-program providing community lives and E-commerce function",
+      projectpic:'/images/startZero_img.webp'
     },
     {
       title:"WhatsMenu",
-      description:"An ordering dishes mobile app",
+      description:"An ordering dishes mobile app run on Tablets",
       projectpic:'/images/whatsMenu_img.webp'
     },
     {
-      title: 'Simple Mobile Blog App',
-      description: 'A blog app on mobile platform',
+      title: 'GuanYiAn',
+      description: 'A online learning mini-program run on wechat',
+      projectpic:'/images/guanYiAn_img.webp'
     },
     {
-      title: 'Realtime Chat App UI Design',
-      description: 'A UI design for realtime chat app',
+      title: 'HotEvent',
+      description: 'A simple news pubishing system, some hotEvents around you',
+      projectpic:'/images/hotEvents_img.webp'
     },
   ]
   return (

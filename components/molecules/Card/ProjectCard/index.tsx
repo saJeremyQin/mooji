@@ -16,12 +16,12 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
     <div className="w-full ">
-      <LazyCard bottomSquareSize={bottomSquareSize} height={height} imageSrc={projectpic}
+      <LazyCard title={title} bottomSquareSize={bottomSquareSize} height={height} imageSrc={projectpic}
       />
       <div className="flex flex-col place-items-center text-center mt-10">
-        <div className="mb-2.5">
+        {/* <div className="mb-2.5">
           <Text value={title} textStyle="ProjectTitle" />
-        </div>
+        </div> */}
         <div className="mb-9">
           <Text value={description} textStyle="ProjectDescription" />
         </div>

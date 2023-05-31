@@ -1,16 +1,19 @@
 import React,{useState, useEffect} from 'react';
 import Image from 'next/image';
 // import { relative } from 'path';
+import Text from '../Text/index'
 
 interface LazyCardProps {
   bottomSquareSize?: 'small' | 'big';
   height?: 300 | 350 | 400 | 450;
   imageSrc?: string;
+  title:string;
 }
 const LazyCard = ({
   bottomSquareSize = 'small',
   height = 450,
-  imageSrc
+  imageSrc,
+  title
 }: LazyCardProps) => {
   const [imageDimensions, setImageDimensions] = useState({ width: 0, height: 0 });
 
@@ -61,7 +64,9 @@ const LazyCard = ({
     >
       <div className="w-full flex flex-col place-items-center">
         {/* bg-[#212136] */}
-        <div className="w-full max-w-[160px] h-[26px] mb-3.5 rounded-full bg-light"></div>
+        <div className="w-full max-w-[160px] h-[26px] flex items-center justify-center mb-3.5 rounded-full bg-light">
+          <Text value={title} textStyle="ProjectTitle" />
+        </div>
         <div className="w-full max-w-[96px] h-[26px] rounded-full"></div>
       </div>
       <div
