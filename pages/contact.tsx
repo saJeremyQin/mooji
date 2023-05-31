@@ -27,7 +27,7 @@ const Contact = () => {
               />
               <IconListItem
                 label="Email"
-                value="support@mooji.dev"
+                value="mooji.dev@gmail.com"
                 icon={<FiMail />}
               />
             </div>
