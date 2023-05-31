@@ -129,16 +129,11 @@ const Home = () => {
             />
           </div>
           <div className="w-full grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-5">
-            <div data-aos="flip-left">
-              {/* <ProjectCard
-                title="WoWallet"
-                description="A wallet provding facilating lives and finance infomation"
-                projectpic='/images/wowallet_img.webp'
-              /> */}
+            <div data-aos="flip-left">   
               <ProjectCard
-                title='HotEvent'
-                description='A simple news pubishing system, some hotEvents around you.'
-                projectpic='/images/hotEvents_img.webp'
+                title="StartZero"
+                description="An mini-program providing community lives and E-commerce function"
+                projectpic='/images/startZero_img.webp'
               />
             </div>
             <div data-aos="flip-right">
@@ -177,19 +172,19 @@ const Home = () => {
             </div>
             <div data-aos="fade-up" data-aos-delay="300">
               <PricingCard
-                price="4500$"
+                price="4000$"
                 title="Development"
                 features={[
                   'Web & Mobile',
                   'Well-documented',
-                  '7 revisions',
-                  '$900/additional page',
+                  '8 revisions',
+                  '$800/additional page',
                 ]}
               />
             </div>
             <div data-aos="fade-up-left">
               <PricingCard
-                price="2500$"
+                price="2000$"
                 title="Maintenance"
                 features={[
                   'Daily backup',

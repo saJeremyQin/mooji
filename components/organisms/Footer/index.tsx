@@ -27,13 +27,13 @@ const Footer = () => {
               <Text value="SERVICES" textStyle="FooterLinkGroupTitle" />
               <div className="space-y-[10px]">
                 <NavLink
-                  value="Web Development"
+                  value="Web/APP Development"
                   href="/service/detail"
                 />
-                <NavLink
+                {/* <NavLink
                   value="App Development"
                   href="/service/detail"
-                />
+                /> */}
                 <NavLink value="UI Design" href="/service/detail" />
                 <NavLink value="Consultation" href="/service/detail" />
                 <NavLink value="Maintenance" href="/service/detail" />
@@ -46,19 +46,19 @@ const Footer = () => {
                 <NavLink value="About" href="/about" />
                 <NavLink value="Contact" href="/contact" />
                 <NavLink value="Send Quote" href="/quote" />
-                <NavLink value="Privacy Policy" href="/privacy-policy" />
+                {/* <NavLink value="Privacy Policy" href="/privacy-policy" /> */}
                 <NavLink value="Term of Service" href="/term-of-service" />
-                <NavLink value="Jobs" href="/jobs" />
-                <NavLink value="Blogs" href="/blog" />
+                {/* <NavLink value="Jobs" href="/jobs" />
+                <NavLink value="Blogs" href="/blog" /> */}
               </div>
             </div>
             <div className="space-y-5">
-              <Text value="RESOURCES" textStyle="FooterLinkGroupTitle" />
+              <Text value="LINKS" textStyle="FooterLinkGroupTitle" />
               <div className="space-y-[10px]">
-                <NavLink value="Support" href="/support" />
-                <NavLink value="Documentation" href="/documentation" />
-                <NavLink value="License" href="/license" />
-                <NavLink value="Sitemap" href="/sitemap" />
+                <NavLink value="WhatsMenu" href="https://whatsmenu-web.vercel.app" />
+                <NavLink value="Jeremy " href="https://jeremyqin.vercel.app" />
+                {/* <NavLink value="License" href="/license" />
+                <NavLink value="Sitemap" href="/sitemap" /> */}
               </div>
             </div>
           </div>
