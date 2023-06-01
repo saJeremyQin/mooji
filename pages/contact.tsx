@@ -7,7 +7,7 @@ import PageTemplate from 'components/templates/PageTemplate'
 import React,{ useState, ChangeEvent} from 'react'
 import { FiMail, FiPhoneCall } from 'react-icons/fi'
 import { db } from '../firebase/firebaseConfig'
-import { push, ref } from "firebase/database";
+import { push, ref } from "firebase/database"
 // import { ToastContainer, toast } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css";
 
