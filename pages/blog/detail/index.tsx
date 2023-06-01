@@ -289,8 +289,8 @@ const BlogDetail = () => {
           data-aos="fade-up"
         >
           <div className="grid grid-cols-2 gap-5">
-            <InputGroup label="Name" />
-            <InputGroup label="Email" />
+            <InputGroup label="Name" value=''/>
+            <InputGroup label="Email" value='' />
           </div>
           <TextAreaGroup label="Comment" />
           <div className="flex justify-end">
