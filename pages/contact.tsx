@@ -19,14 +19,24 @@ const Contact = () => {
   const messagesRef = ref(db, "messages");
 
 
+  const isEmailValid = () => {
+    // Basic email validation check using a regular expression
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
 
   const handleSubmit = (e: ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // console.log("handle submit");   
-    console.log('name,', name);
-    console.log('email,', email);
-    console.log('subject,', subject);
-    console.log('message,', message);
+    // check if it is empty
+    if(!name || !email || !subject || !message) {
+      toast.warning("Please fill the form correctly!");
+      return ;
+    }
+    // validate email format with Regular expression
+    if(!isEmailValid()) {
+      toast.error("Please provide a valid email!");
+      return ;
+    }
     
     push(messagesRef, {
       name,
