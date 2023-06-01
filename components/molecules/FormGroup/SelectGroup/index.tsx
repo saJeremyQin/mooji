@@ -8,7 +8,7 @@ interface SelectGroupProps extends SelectProps {
 }
 const SelectGroup = ({
   label,
-  defaultValue,
+  // defaultValue,
   onChange,
   options,
   required,
@@ -21,7 +21,7 @@ const SelectGroup = ({
     <div className="space-y-1.5">
       <Label label={label} htmlFor={randomId} />
       <Select
-        defaultValue={defaultValue}
+        // defaultValue={defaultValue}  
         onChange={onChange}
         required={required}
         options={options}
