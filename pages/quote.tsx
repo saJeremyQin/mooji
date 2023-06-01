@@ -5,11 +5,69 @@ import SelectGroup from 'components/molecules/FormGroup/SelectGroup'
 import TextAreaGroup from 'components/molecules/FormGroup/TextAreaGroup'
 import PageSentence from 'components/molecules/PageSentence'
 import PageTemplate from 'components/templates/PageTemplate'
-import React from 'react'
+import React,{ ChangeEvent, useState } from 'react'
+import { db } from '../firebase/firebaseConfig'
+import { push, ref } from "firebase/database"
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { validateArgCount } from '@firebase/util'
 
 const Quote = () => {
+  const [name, setName] =  useState('');
+  const [email, setEmail] = useState('');
+  const [company, setCompany] = useState('');
+  const [comsize, setComsize] = useState('small');
+  const [problem, setProblem] = useState('');
+  const quotesRef = ref(db, "quotes");
+
+
+  const isEmailValid = () => {
+    // Basic email validation check using a regular expression
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
+  const handleSubmit = (e:ChangeEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    console.log('comsieze is', comsize);
+    
+
+    // check if it is empty
+    if(!name || !email || !company || !problem ) {
+      toast.warning("Please fill the form correctly!");
+      return ;
+    }
+    // validate email format with Regular expression
+    if(!isEmailValid()) {
+      toast.error("Please provide a valid email!");
+      return ;
+    }
+
+    push(quotesRef,{
+      name,
+      email,
+      company,
+      comsize
+    }).then(()=>{
+      toast.success("Message sent successfully");
+
+      setName('');
+      setEmail('');
+      setCompany('');
+      setComsize('small');
+      setProblem('');
+
+    }).catch((error) => {
+      console.error("Error pushing data:", error);
+
+    })
+
+  }
+  
   return (
     <>
+      <ToastContainer />
       <PageTemplate title='Send Quote - Mooji'>
         <section className="grid grid-cols-1 place-items-center gap-5 lg:grid-cols-2">
           <aside className="w-full sm:w-10/12 md:w-8/12 grid grid-cols-1 place-items-center gap-12 lg:w-full lg:place-items-start" data-aos="fade-down-right">
@@ -30,15 +88,18 @@ const Quote = () => {
             </div>
           </aside>
           <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full lg:flex lg:justify-end" data-aos="fade-up-left">
-            <div className="grid grid-cols-1 gap-7 p-6 md:p-9 bg-light rounded-md lg:w-10/12 ">
+            <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-7 p-6 md:p-9 bg-light rounded-md lg:w-10/12 ">
               <div className="grid grid-cols-2 gap-4">
-                <InputGroup label="Name" />
-                <InputGroup label="Email" />
+                <InputGroup label="Name" onChange={(e) => setName(e.target.value)} value={name}/>
+                <InputGroup label="Email" onChange={(e) => setEmail(e.target.value)} value={email}/>
               </div>
               <div className="grid grid-cols-2 gap-4">
-                <InputGroup label="Company" />
+                <InputGroup label="Company" onChange={(e) => setCompany(e.target.value)} value={company}/>
                 <SelectGroup
                   label="Company Size"
+                  // onChange={(e) => setComsize(e.target.value) value={comsize}}
+                  onChange={(e) => setComsize((e.target as HTMLSelectElement).value)}
+                  value={comsize}
                   options={[
                     { label: 'Small', value: 'small' },
                     { label: 'Medium', value: 'medium' },
@@ -46,9 +107,9 @@ const Quote = () => {
                   ]}
                 />
               </div>
-              <TextAreaGroup label="Tell Us Your Problem" />
+              <TextAreaGroup label="Tell Us Your Problem" value={problem}  onChange={(e) => setProblem(e.target.value)} />
               <Button value="Send Quote" />
-            </div>
+            </form>
           </aside>
         </section>
       </PageTemplate>

@@ -4,11 +4,13 @@ import { useEffect, useState } from 'react'
 import randomString from 'utils/randomString'
 
 interface SelectGroupProps extends SelectProps {
-  label: string
+  label: string,
+  value: string
 }
 const SelectGroup = ({
   label,
   // defaultValue,
+  value,
   onChange,
   options,
   required,
@@ -22,6 +24,7 @@ const SelectGroup = ({
       <Label label={label} htmlFor={randomId} />
       <Select
         // defaultValue={defaultValue}  
+        value={value}
         onChange={onChange}
         required={required}
         options={options}
