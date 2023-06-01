@@ -10,17 +10,38 @@ import randomString from 'utils/randomString'
 const ProjectDetail = () => {
   interface Project {
     title: string
-    description: string
+    description: string,
+    projectpic: string
   }
   const projectList: Project[] = [
+    // {
+    //   title: 'Simple Mobile Blog App',
+    //   description: 'A blog app on mobile platform',
+    // },
+    // {
+    //   title: 'Realtime Chat App UI Design',
+    //   description: 'A UI design for realtime chat app',
+    // },
+    // {
+    //   title:"StartZero",
+    //   description:"An mini-program providing community lives and E-commerce function",
+    //   projectpic:'/images/startZero_img.webp'
+    // },
     {
-      title: 'Simple Mobile Blog App',
-      description: 'A blog app on mobile platform',
+      title:"WhatsMenu",
+      description:"An ordering dishes mobile app run on Tablets",
+      projectpic:'/images/whatsMenu_img.webp'
     },
     {
-      title: 'Realtime Chat App UI Design',
-      description: 'A UI design for realtime chat app',
+      title: 'GuanYiAn',
+      description: 'A online learning mini-program run on wechat',
+      projectpic:'/images/guanYiAn_img.webp'
     },
+    // {
+    //   title: 'HotEvent',
+    //   description: 'A simple news pubishing system, some hotEvents around you',
+    //   projectpic:'/images/hotEvents_img.webp'
+    // },
   ]
   return (
     <PageTemplate title='Project Detail - Mooji'>
@@ -35,12 +56,12 @@ const ProjectDetail = () => {
       <LineDivider />
       <section className="grid grid-cols-1 gap-8 md:grid-cols-2">
         <aside data-aos="fade-up-right">
-          <LazyCard bottomSquareSize="big" height={400} />
+          <LazyCard title="startZero" bottomSquareSize="big" height={400} imageSrc='/images/startZero_img.webp' />
         </aside>
         <aside className="grid gap-12 place-content-center" data-aos="fade-up-left">
           <Text
             textStyle="SectionParagraph"
-            value="Something has always existed. According to physics, there can never be true physical nothingness—though there can be times when existence resembles nothing."
+            value="We build an app to connect the club member to our offline consume scenarios, for the fans of vegetable meat, the latest activities with famous Brand such as KFC, Subway"
           />
           <div className="grid gap-6">
             <div className="grid gap-2">
@@ -49,12 +70,12 @@ const ProjectDetail = () => {
             </div>
             <div className="grid gap-2">
               <Text value="CLIENT" textStyle="ProjectDetailLabel" />
-              <Text value="Acme, Inc" textStyle="ProjectDetailValue" />
+              <Text value="StartZero, Inc" textStyle="ProjectDetailValue" />
             </div>
             <div className="grid gap-2">
               <Text value="TECHNOLOGY" textStyle="ProjectDetailLabel" />
               <Text
-                value="JavaScript, HTML, CSS"
+                value="JavaScript, HTML, CSS, Uniapp"
                 textStyle="ProjectDetailValue"
               />
             </div>
@@ -66,7 +87,7 @@ const ProjectDetail = () => {
         <div className="text-center sm:w-10/12 md:w-8/12 lg:w-6/12" data-aos="zoom-in-up">
           <PageSentence
             badge="PROJECT DETAIL"
-            title="The Desktop App Landing Page"
+            title="other Apps we developed"
           />
         </div>
         <div className="w-full grid grid-cols-1 gap-y-16 sm:grid-cols-2 sm:gap-x-5">
@@ -80,7 +101,7 @@ const ProjectDetail = () => {
                 <ProjectCard
                   title={project.title}
                   description={project.description}
-                  projectpic={''}
+                  projectpic={project.projectpic}
                 />
               </div>
             )
