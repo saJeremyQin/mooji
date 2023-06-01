@@ -6,8 +6,8 @@ import PageSentence from 'components/molecules/PageSentence'
 import PageTemplate from 'components/templates/PageTemplate'
 import React,{ useState, ChangeEvent} from 'react'
 import { FiMail, FiPhoneCall } from 'react-icons/fi'
-import { database } from '../firebase/firebaseConfig'
-import { getDatabase, push, ref } from "firebase/database";
+import { db } from '../firebase/firebaseConfig'
+import { push, ref } from "firebase/database";
 // import { ToastContainer, toast } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css";
 
@@ -16,7 +16,7 @@ const Contact = () => {
   const [email, setEmail] = useState('');
   const [subject,setSubject] = useState('');
   const [message, setMessage] = useState('');
-  const messagesRef = ref(database, "messages");
+  const messagesRef = ref(db, "messages");
 
 
 
