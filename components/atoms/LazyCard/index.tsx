@@ -99,21 +99,18 @@ const LazyCard = ({
         } h-7/12 rounded-tr-[20px] rounded-tl-[20px] bg-[#212136]`}
         style={{position:'relative', width:shouldLimitImageWidth? '100%' : imageDimensions.width, height:imageDimensions.height}}
       >
-        {/* <div className={ shouldLimitImageWidth ? 'max-w-full':`w-${imageDimensions.width}`} > */}
         { 
           imageSrc && (
               <Image
                 src={imageSrc}
                 alt="cardImage"
                 layout="fill"
-                // width={shouldLimitImageWidth ? windowWidth*0.8 : imageDimensions.width}
-                // height={imageDimensions.height}
+       
                 objectFit="cover"
                 className="rounded-tr-[20px] rounded-tl-[20px]"
               />
           )
         }
-        {/* </div> */}
       </div>
     </div>
   )
