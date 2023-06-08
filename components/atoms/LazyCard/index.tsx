@@ -16,6 +16,27 @@ const LazyCard = ({
   title
 }: LazyCardProps) => {
   const [imageDimensions, setImageDimensions] = useState({ width: 0, height: 0 });
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  // set the windowWidth
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    if (typeof window !== 'undefined') {
+      setWindowWidth(window.innerWidth);
+      window.addEventListener('resize', handleResize);
+    }
+
+    return () => {
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('resize', handleResize);
+      }
+    };
+  }, []);
+
+  const shouldLimitImageWidth = windowWidth < imageDimensions.width;
 
   useEffect(() => {
     const calculateImageDimensions = () => {
@@ -27,7 +48,7 @@ const LazyCard = ({
 
         const imgAspectRatio = img.width / img.height;
 
-        if (imgAspectRatio > 1.6) {
+        if (imgAspectRatio > 1.5) {
           // Landscape image
           const maxWidth = 480;
           const calculatedWidth = Math.min(img.width, maxWidth);
@@ -35,7 +56,7 @@ const LazyCard = ({
           setImageDimensions({ width: calculatedWidth, height: calculatedHeight });
         } else {
           // Portrait image
-          const maxHeight = 300;
+          const maxHeight = 320;
           const calculatedHeight = Math.min(img.height, maxHeight);
           const calculatedWidth = calculatedHeight * imgAspectRatio;
           setImageDimensions({ width: calculatedWidth, height: calculatedHeight });
@@ -45,7 +66,10 @@ const LazyCard = ({
 
     calculateImageDimensions();
   }, [imageSrc]);
+  console.log("the title is", title);
   console.log(`card dimension:${imageDimensions.width},${imageDimensions.height}`);
+  console.log(`the height is ${height}, the bottomSquaresize is ${bottomSquareSize}`);
+  
 
 
   return (
@@ -73,19 +97,23 @@ const LazyCard = ({
         className={`w-full ${
           bottomSquareSize == 'small' ? 'max-w-[480px] max-h-[300px]' : ''
         } h-7/12 rounded-tr-[20px] rounded-tl-[20px] bg-[#212136]`}
-        style={{position:'relative', width:imageDimensions.width, height:imageDimensions.height}}
+        style={{position:'relative', width:shouldLimitImageWidth? '100%' : imageDimensions.width, height:imageDimensions.height}}
       >
-        {   
+        {/* <div className={ shouldLimitImageWidth ? 'max-w-full':`w-${imageDimensions.width}`} > */}
+        { 
           imageSrc && (
               <Image
                 src={imageSrc}
                 alt="cardImage"
                 layout="fill"
+                // width={shouldLimitImageWidth ? windowWidth*0.8 : imageDimensions.width}
+                // height={imageDimensions.height}
                 objectFit="cover"
                 className="rounded-tr-[20px] rounded-tl-[20px]"
               />
           )
         }
+        {/* </div> */}
       </div>
     </div>
   )
