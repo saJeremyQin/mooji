@@ -14,7 +14,7 @@ import { FiFigma, FiCode, FiBox } from 'react-icons/fi'
 const Home = () => {
   return (
     <>
-      <PageTemplate title="Home - Mooji">
+      <PageTemplate title="Mooji - A brilliant Adelaide-based Web/App development provider">
         {/* Banner Section */}
         <section
           className="flex flex-col gap-10 items-center"
