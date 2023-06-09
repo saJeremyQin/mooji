@@ -49,7 +49,7 @@ const TestimonialList = () => {
         <SwiperSlide className='mt-10'>
           <TestimonialCard
             avatarSrc="/images/testimonial-avatar-2.png"
-            name="Tao Wu"
+            name="Lisa Wu"
             company="GuanYiAn Tech Ltd."
             testimony={`"The online education platform your company provided support us a lot. It has really helped our business."`}
           />
@@ -57,8 +57,8 @@ const TestimonialList = () => {
         <SwiperSlide className='mt-10'>
           <TestimonialCard
             avatarSrc="/images/testimonial-avatar-3.png"
-            name="Owen Chang"
-            company="Forks and Chopsticks Restaurant."
+            name="Keqi Chang"
+            company="Yudu Renhe Restaurant."
             testimony={`"The whatsMenu app improve the effiency of our restaurant, I am shocked by the strength of new tech which make us serve our diners better is truly."`}
           />
         </SwiperSlide>
