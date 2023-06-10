@@ -11,6 +11,17 @@ import PageTemplate from 'components/templates/PageTemplate'
 import Image from 'next/image'
 import React from 'react'
 import { FiFigma, FiCode, FiBox } from 'react-icons/fi'
+// import { getStaticProps } from 'next';
+import { GetStaticProps } from 'next';
+
+
+export const getStaticProps:GetStaticProps = async () => {
+  return {
+    props: {},
+  };
+}
+
+
 const Home = () => {
   return (
     <>
@@ -91,7 +102,7 @@ const Home = () => {
             <div className="space-y-12" data-aos="fade-right">
               <SectionSentence
                 title="We're a team of designers, engineers and analysts"
-                paragraph="Our team consists of many creative and highly experienced people. Having experience with super complex projects allows us to see problems from a higher perspective while also being able to 
+                paragraph="Our team consists of many creative and highly experienced people, most of them are living in Adelaide. Having experience with super complex projects allows us to see problems from a higher perspective while also being able to 
                 adapt flexibly based on different situations, finding the most suitable solution for you."
                 badge="OUR TEAM"
               />
@@ -214,3 +225,4 @@ const Home = () => {
 }
 
 export default Home
+// export {Home}

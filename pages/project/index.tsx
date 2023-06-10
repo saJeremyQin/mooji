@@ -6,14 +6,22 @@ import ProjectCard from 'components/molecules/Card/ProjectCard'
 import PageTemplate from 'components/templates/PageTemplate'
 import React from 'react'
 import randomString from 'utils/randomString'
+import { GetStaticProps } from 'next';
 
-const Project = () => {
-  interface Project {
-    title: string
-    description: string,
-    projectpic?:string
-  }
-  const projectList: Project[] = [
+interface Project {
+  title: string
+  description: string,
+  projectpic?:string
+}
+
+interface ProjectFCProps {
+  projectList: Project[]
+}
+
+export const getStaticProps:GetStaticProps<ProjectFCProps> = async () => {
+
+  // Fetch the project data from your data source
+  const projectList:Project[] = [
     {
       title:"StartZero",
       description:"An mini-program providing community lives and E-commerce function",
@@ -35,6 +43,17 @@ const Project = () => {
       projectpic:'/images/hotEvents_img.webp'
     },
   ]
+
+  return {
+    props: {
+      projectList,
+    },
+  }
+}
+
+const Project:React.FC<ProjectFCProps> = ({projectList}) => {
+
+
   return (
     <PageTemplate title="Mooji - the awesome web/app development projects we have ever built">
       <section className="flex flex-col items-center gap-5 md:flex-row md:justify-between">
