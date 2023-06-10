@@ -10,7 +10,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <PageTemplate title="About - Mooji">
+    <PageTemplate title="Mooji - A brilliant Adelaide based Web/App development provider">
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 place-items-center">
         <aside className="w-full" data-aos="fade-down-right">
           <div className="w-full h-[480px] relative">
