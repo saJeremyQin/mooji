@@ -25,7 +25,7 @@ export const getStaticProps:GetStaticProps = async () => {
 const Home = () => {
   return (
     <>
-      <PageTemplate title="Mooji - A brilliant Adelaide-based Web/App development provider">
+      <PageTemplate title="Mooji - A brilliant Adelaide based Web/App development provider">
         {/* Banner Section */}
         <section
           className="flex flex-col gap-10 items-center"

@@ -29,7 +29,7 @@ export const getStaticProps:GetStaticProps<ProjectFCProps> = async () => {
     },
     {
       title:"WhatsMenu",
-      description:"An ordering dishes mobile app run on Tablets",
+      description:"An ordering dishes mobile app run on Tablets, originally developed for one fantastic Adelaide restaurant",
       projectpic:'/images/whatsMenu_img.webp'
     },
     {

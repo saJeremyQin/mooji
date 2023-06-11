@@ -17,6 +17,7 @@ const NavLink = ({ href, value, canActive = false }: Props) => {
           // className={`text-base text-lightBrown select-none hover:text-white ${
             router.pathname == href && canActive
               ? 'font-semibold'
+              // ? 'font-bold'
               : 'text-opacity-80'
           } ${isMobile ? 'cursor-default' : 'cursor-pointer'}`}
         >
